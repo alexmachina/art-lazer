@@ -9,7 +9,19 @@ app.config(['$routeProvider',
 	.when('/', {
 		templateUrl : 'app/templates/index.html',
 		controller : 'indexCtrl'
+	})
+	
+	.when('/Usuarios', {
+		templateUrl : 'app/templates/users.html',
+		controller : 'usersCtrl'
+	})
+	
+	
+	.when('/Usuario/:username', {
+		templateUrl : 'app/templates/user.html',
+		controller : 'userCtrl'
 	});
+	
 	
 	
 

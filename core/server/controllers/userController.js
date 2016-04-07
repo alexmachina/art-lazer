@@ -67,7 +67,7 @@ function UserController() {
 		var loginInfo = req.body;
 		//Check if data exists in request
 		if(!loginInfo || !loginInfo.username || !loginInfo.password)
-			res.status(500).send({"error" : "Missing username and/or password"});
+		return	res.status(500).send({"error" : "Missing username and/or password"});
 
 		//Query the database for the user.
 		userSchema.findOne(loginInfo, function(error, user){
@@ -81,7 +81,7 @@ function UserController() {
 
 			var myToken = jwt.sign(user, "donniebrasco");
 
-			res.send(myToken);
+			return res.send(myToken);
 		});
 
 	};

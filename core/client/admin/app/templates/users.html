@@ -1,0 +1,32 @@
+<h3>Usuarios</h3>
+<div class="row">
+	<table class="table">
+		<thead>
+			<tr>
+				<th>username</th>
+				<th>email</th>
+				<th>#</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="u in users">
+				<td>{{u.username}}</td>
+				<td>{{u.email}}</td>
+				<td><a href="/Admin/#/Usuario/{{u.username}}">
+						<button class="btn btn-default">
+							<span class="glyphicon glyphicon-edit">
+							</span>
+						</button>
+					</a>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+<div class="row">
+	<a href="/Admin/#/Usuario">
+		<button class="btn btn-default">Adicionar</button>
+	</a>
+</div>
+
+

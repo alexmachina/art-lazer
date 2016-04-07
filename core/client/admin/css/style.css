@@ -32,8 +32,16 @@ a:focus{
 	margin-right:initial;
 }
 
+vbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+	background-color:#FDFF89;
+}
 
-/* Custom classes */
+.table > tbody > tr > td {
+	line-height:2.2;
+}
+
+
+		/* Custom classes */
 
 .login-form{
 	margin-top:10%;
