@@ -1,22 +1,28 @@
 /* This module is used to set configurations
  * and returns an instance of Express populated
  * with the settings*/
-var Express = require('express');
-var Router = Express.Router();
-var Routes = require('../routes');
-var Config = require('../config');
-
+var Express = require('express'),
+	Routes = require('../routes'),
+	Config = require('../config'),
+	ExpressJWT = require('express-jwt'),
+	BodyParser = require('body-parser');
+	
 /* Module that settles express'es middlewares */
 module.exports = function () {
-var express = Express();
-express.set('port', Config.expressPort);
+	var express = Express();
+	express.set('port', Config.expressPort);
 
-/* Might have to wrap routes use inside
-* callback function later */
-Routes(Router);
-express.use(Router);
+	//Defines the application routes
 
+	express.use("/api/admin", ExpressJWT({secret : "donniebrasco"}).unless({path : ['/api/admin/user/login']}));
 
-return express;
+	express.use(Express.static('./core/client/'));
+	express.use("/admin", Express.static('./core/client/admin'));
+
+	express.use(BodyParser.urlencoded({extended: true}));
+	express.use(BodyParser.json());
+	express.use(Routes);
+
+	return express;
 
 }();

@@ -6,7 +6,7 @@ function Server() {
 	this.start = function(callback) {
 
 		//Starts server at configurated port.
-		ExpressApp.listen(ExpressApp.port, function(error){
+		ExpressApp.listen(ExpressApp.get('port'), function(error){
 			if(typeof callback === 'function')
 				callback(error, ExpressApp);
 		});

@@ -1,0 +1,47 @@
+@charset="utf-8";
+
+/*  Bootstrap theming and override  */
+.navbar-default{
+	background-color:#5CD1D8;
+}
+
+.navbar-default .navbar-brand{
+	color:yellow;
+}
+
+.navbar-brand{
+	font-size:1.8em;
+	font-family:cursive;
+}
+
+
+.navbar-default .navbar-nav > .active > a, 
+.navbar-default .navbar-nav > .active > a:hover, 
+.navbar-default .navbar-nav > .active > 
+a:focus{
+
+	background-color:white;
+	font-weight:bold;
+	border:1px solid #5CD1D8;
+
+}
+
+.row {
+
+	margin-left:initial;
+	margin-right:initial;
+}
+
+
+/* Custom classes */
+
+.login-form{
+	margin-top:10%;
+}
+
+.error-message {
+	color:red;
+}
+
+
+

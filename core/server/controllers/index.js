@@ -2,6 +2,7 @@
 
 function IndexController(){
 	this.get = function(req, res) {
+		debugger;
 		res.send("Hello");
 	
 	};

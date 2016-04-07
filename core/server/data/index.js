@@ -37,6 +37,7 @@ var mongoose = require('mongoose'),
 }
 
 var dataIndex = new DataIndex();
+dataIndex.connect();
 
 module.exports = dataIndex;
 

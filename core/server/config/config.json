@@ -1,5 +1,5 @@
 {
-  "environment" : "test",
+  "environment" : "development",
   "expressPort" : "3000",
   "dbUrl" : "mongodb://localhost/artLazerDb"
 }

@@ -8,12 +8,19 @@ function Schema() {
 
 
 var mongoose = data.mongoose;
-
+var typeRUS =  {type : String, unique : true, required : true};
 var UserSchema = mongoose.Schema({
-	'username' : String,
-	'password' : String
 
+	'username' : typeRUS,
+	'password' : String,
+	'email' : typeRUS,
+	'picture' : String,
+	'lastLogin' : Date,
+	'verified' : Boolean
+	
 });
+
+
 
 this.User = mongoose.model('User', UserSchema);
 
@@ -22,4 +29,4 @@ this.User = mongoose.model('User', UserSchema);
 
 
 
-	module.exports = new Schema();
+module.exports = new Schema();
