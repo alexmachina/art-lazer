@@ -33,4 +33,5 @@ app.directive('artInput', function(){
 		templateUrl: 'app/directives/art-input.html'
 	
 	};
+	
 });

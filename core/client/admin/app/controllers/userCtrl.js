@@ -32,7 +32,8 @@ app.controller('userCtrl', function($scope, $routeParams, $http, $location, User
 					$location.path('/Usuarios');
 				})
 			.catch(function(response){
-				$scope.errorMessage = "Erro: " + response.data.error;
+				console.log(response.data);
+				$scope.errorMessage = "Server Error: " + response.data.error;
 
 			});
 		} else {

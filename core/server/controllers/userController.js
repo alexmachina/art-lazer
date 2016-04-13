@@ -79,27 +79,43 @@ function UserController() {
 	this.updateUser = function(req, res){
 		var reqUser = req.body, //User inside request
 		query = {username : req.params.username}, //Query inside parameters
-		newName = req.body.username + '.jpg'; //Picture filename
+		newName = req.body.username + new Date().getTime()/1000 + '.jpg' ; //Picture filename
 
 		//If there is a pictre, upload, then insert
 		if(req.file) {
-		utils.moveAndRename(req.file.path, newName, utils.entities.USER, function(error){
-			if(error)
-				return res.status(500).send({"error" : error});
-
-			reqUser.picture = newName;
-
-			userSchema.update(query, {$set : reqUser}, function(error, user){
+			//Move the uploaded file to the User folder
+			utils.moveAndRename(req.file.path, newName, utils.entities.USER, function(error) {
 				if(error)
 					return res.status(500).send({"error" : error});
 
-				return res.status(200).send(user);
+				reqUser.picture = newName;
+
+				//Delete the old user picture file
+				userSchema.findOne(query, function(error, user){
+					utils.deleteFile(user.picture, utils.entities.USER, function(error) {
+						if (error) 
+							return res.status(500).send({"error" : error});
+						
+
+						//Update the user in the database
+						userSchema.update(query, {$set : reqUser}, function(error, user){
+							if(error)
+								return res.status(500).send({"error" : error});
+
+							return res.status(200).send(user);
+						});
+
+					});
+
+				});
+
+				/*
+				*/
+
 			});
-		});
-		
-		//Just insert
+
+			//Just insert
 		} else {
-			console.log(reqUser);
 			userSchema.update(query, {$set : reqUser}, function(error, user){
 				if(error)
 					return res.status(500).send({"error" : error});

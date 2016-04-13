@@ -1,4 +1,4 @@
-var app = angular.module("ArtLazerAdmin",["ngRoute"]);
+var app = angular.module("ArtLazerAdmin",["ngRoute","ui.bootstrap"]);
 
 app.factory('UserService', function() {
 	var self = this;

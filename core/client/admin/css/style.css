@@ -50,8 +50,19 @@ vbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
 	line-height:2.2;
 }
 
+/* Active pagination background */
+.pagination > .active > a{
+	background-color:#5CD1D8;
+	border-color:#5CD1D8;
+}
+.pagination > .active > a, .pagination > .active > span, .pagination > .active > a:hover, .pagination > .active > span:hover, .pagination > .active > a:focus, .pagination > .active > span:focus{
+	background-color:#5CD1D8;
+	border-color:#5CD1D8;
 
-		/* Custom classes */
+}
+
+
+/* Custom classes */
 
 .login-form{
 	margin-top:10%;
@@ -63,7 +74,7 @@ vbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
 
 .validation-error {
 
-color:red;
+	color:red;
 }
 
 .container {

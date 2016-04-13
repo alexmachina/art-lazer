@@ -27,6 +27,25 @@ function Utils(){
 	
 	};
 
+	this.deleteFile = function(fileName, eType, cb){
+		try {
+		pathToUnlink = eType.folder + fileName;
+		console.log("File : " + fileName);
+
+		fs.unlink(pathToUnlink, function(error){
+			if(error)
+				return cb(error.code);
+			
+			return cb();
+		
+		});
+		} catch(error) {
+			return cb(error.message);
+		}
+	
+		
+	};
+
 }
 
 

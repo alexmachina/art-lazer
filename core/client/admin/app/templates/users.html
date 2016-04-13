@@ -1,5 +1,7 @@
 <h3>Usuarios</h3>
 <div class="row">
+	<span class="glyphicon glyphicon-search"></span>
+	<input type="text" ng-model="searchText" placeholder="Pesquisar...">
 	<table class="table table-striped">
 		<thead>
 			<tr>
@@ -9,7 +11,7 @@
 			</tr>
 		</thead>
 		<tbody>
-			<tr ng-repeat="u in users">
+			<tr ng-repeat="u in filteredUsers | filter:searchText">
 				<td>{{u.username}}</td>
 				<td>{{u.email}}</td>
 				<td><a href="/Admin/#/Usuario/{{u.username}}">
@@ -21,7 +23,15 @@
 			</tr>
 		</tbody>
 	</table>
-</div>
+	</div>
+	<uib-pagination total-items="totalItems" num-pages="numPages" max-size="maxSize" ng-model="currentPage" 
+		boundary-link="true"
+		next-text="Próximo"
+		previous-text="Anteior"
+		change="pageChanged()"></uib-pagination>
+
+
+
 
 <div class="row">
 	<a href="/Admin/#/Usuario">
