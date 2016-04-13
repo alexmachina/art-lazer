@@ -15,6 +15,11 @@ app.config(['$routeProvider',
 		templateUrl : 'app/templates/users.html',
 		controller : 'usersCtrl'
 	})
+
+	.when('/Usuario', {
+		templateUrl : 'app/templates/user.html',
+		controller : 'userCtrl'
+	})
 	
 	
 	.when('/Usuario/:username', {

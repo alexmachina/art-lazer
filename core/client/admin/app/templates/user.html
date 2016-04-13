@@ -1,1 +1,40 @@
 <h3>Usuário</h3>
+
+<div class="row">
+	<div class="col-md-4">
+		<form name="form">
+			<art-input type="text" ng-model="user.username" name="username" label="Username" minlength="4" maxlength="12"></art-input>
+
+			<art-input type="text" ng-model="user.name" name="name" label="Nome" required="true" minlength="3" maxlength="32"></art-input>
+
+			<art-input ng-model="user.email" type="email" name="email" label="Email" required="true" min-length="6" maxlength="32"></art-input>
+
+			<div class="form-group">
+				<label for="picture">Foto</label>
+				<img class="img img-responsive" src="/images/user/{{user.picture}}">
+			</div>
+
+			<div class="form-group">
+				<input type="file" name="pictureFile">
+			</div>
+		</form>
+	</div>
+	
+</div>
+
+
+<div class="row form-group">
+	<input type="submit" class="col-md-4 btn btn-primary " value="Salvar" ng-click="submit()">
+
+
+</div>
+<div class="form-group">
+<span class="error-message">{{errorMessage}}</span>
+
+</div>
+<div class="row form-group">
+	<button class="col-md-4 btn btn-default" ng-click="voltar()">Voltar</button>
+	</div>
+	<div class="row form-group">
+		
+

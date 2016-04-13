@@ -17,6 +17,7 @@ module.exports = function () {
 	express.use("/api/admin", ExpressJWT({secret : "donniebrasco"}).unless({path : ['/api/admin/user/login']}));
 
 	express.use(Express.static('./core/client/'));
+	express.use('/images', Express.static('./core/server/data/content'))
 	express.use("/admin", Express.static('./core/client/admin'));
 
 	express.use(BodyParser.urlencoded({extended: true}));

@@ -5,8 +5,8 @@ app.controller("mainCtrl", function($rootScope, $scope, UserService, $location){
 		$scope.user = UserService.user;
 			});
 
-	if(!$scope.jwt) {
-		//$location.path('/login');
-		$scope.jwt = UserService.jwt;
+	$scope.jwt = UserService.jwt;
+	if(!UserService.jwt) {
+		$location.path('/login');
 	}
 });

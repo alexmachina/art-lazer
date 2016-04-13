@@ -1,0 +1,10 @@
+<div class="form-group" ng-form="form">
+	<label for="name">{{label}}</label>
+	<input type="{{type}}"  ng-model="bindModel" class="form-control" name="{{name}}" required="required"	ng-maxlength="maxlength" ng-minlength="minlength">
+	  <span class="validation-error" ng-show="form.{{name}}.$error.required">Campo obrigatório!</span>
+	  <span class="validation-error" ng-show="form.{{name}}.$error.maxlength">Muito longo!</span>
+	  <span class="validation-error" ng-show="form.{{name}}.$error.minlength">Muito curto!</span>
+	  <span class="validation-error"ng-show="form.{{name}}.$error.email">Email invalido</span>
+
+</div>
+

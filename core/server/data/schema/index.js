@@ -14,6 +14,7 @@ var UserSchema = mongoose.Schema({
 	'username' : typeRUS,
 	'password' : String,
 	'email' : typeRUS,
+	'name' : typeRUS,
 	'picture' : String,
 	'lastLogin' : Date,
 	'verified' : Boolean

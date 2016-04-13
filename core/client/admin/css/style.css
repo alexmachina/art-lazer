@@ -13,8 +13,18 @@
 	font-size:1.8em;
 	font-family:cursive;
 }
+/* Remove padding between nav and container */
+.container {
+	padding-left:0;
+	padding-right:0;
 
+}
 
+/*Striped table row design */
+.table-striped > tbody > tr:nth-of-type(2n+1) {
+	background-color:#fbf8cc
+
+}
 .navbar-default .navbar-nav > .active > a, 
 .navbar-default .navbar-nav > .active > a:hover, 
 .navbar-default .navbar-nav > .active > 
@@ -51,5 +61,21 @@ vbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
 	color:red;
 }
 
+.validation-error {
 
+color:red;
+}
+
+.container {
+	background-color:aliceblue;
+}
+
+body{
+	background-color:azure;
+}
+
+article {
+	padding-left:15px;
+	padding-right:15px;
+}
 

@@ -12,6 +12,14 @@ app.controller('loginCtrl',  function($scope, $http, $location, UserService, $ro
 				headers : { 'Authorization' : 'Bearer ' + UserService.jwt }
 			};
 
+			//Sets the jwt and content-type for form data requests
+			UserService.multiTokenConfig = { 
+				headers : { 'Authorization' : 'Bearer ' + UserService.jwt,
+					'Content-Type' : undefined}
+			};
+
+			UserService.config = config;
+
 			//Gather the user data
 			$http.get('/api/admin/user/' + $scope.user.username, config)
 				.then(function(response) {
