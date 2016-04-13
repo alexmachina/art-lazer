@@ -1,2 +1,4 @@
 node_modules/
 core/client/vendor
+uploads
+core/server/data/content/user/*
