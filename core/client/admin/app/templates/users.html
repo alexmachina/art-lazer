@@ -6,14 +6,17 @@
 		<thead>
 			<tr>
 				<th>username</th>
-				<th>email</th>
+				<th>Nome</th>
+				<th class="hidden-xs">email</th>
 				<th>#</th>
+
 			</tr>
 		</thead>
 		<tbody>
 			<tr ng-repeat="u in filteredUsers | filter:searchText">
 				<td>{{u.username}}</td>
-				<td>{{u.email}}</td>
+				<td>{{u.name}}</td>
+				<td class="hidden-xs">{{u.email}}</td>
 				<td><a href="/Admin/#/Usuario/{{u.username}}">
 						<button class="btn btn-default">
 							<span class="glyphicon glyphicon-edit">

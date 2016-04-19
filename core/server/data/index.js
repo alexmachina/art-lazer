@@ -16,7 +16,7 @@ var mongoose = require('mongoose'),
 	this.mongoose = mongoose;
 	this.connect = function (cb){
 		
-		mongoose.connect(config.dbUrl);
+		mongoose.connect(config.dbUrl + config.dbName);
 
 		if(config.environment === 'development')
 			mongoose.set('debug', true);

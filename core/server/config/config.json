@@ -1,5 +1,6 @@
 {
   "environment" : "development",
   "expressPort" : "3000",
-  "dbUrl" : "mongodb://localhost/artLazerDb"
+  "dbUrl" : "mongodb://localhost/",
+  "dbName" : "artLazerDb"
 }

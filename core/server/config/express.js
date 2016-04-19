@@ -10,14 +10,14 @@ var Express = require('express'),
 /* Module that settles express'es middlewares */
 module.exports = function () {
 	var express = Express();
-	express.set('port', Config.expressPort);
+	express.set('port', process.env.OPENSHIFT_NODEJS_PORT || Config.expressPort);
 
 	//Defines the application routes
 
 	express.use("/api/admin", ExpressJWT({secret : "donniebrasco"}).unless({path : ['/api/admin/user/login']}));
 
 	express.use(Express.static('./core/client/'));
-	express.use('/images', Express.static('./core/server/data/content'))
+	express.use('/images', Express.static('./core/server/data/content'));
 	express.use("/admin", Express.static('./core/client/admin'));
 
 	express.use(BodyParser.urlencoded({extended: true}));

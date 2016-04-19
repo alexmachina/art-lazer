@@ -4,6 +4,7 @@
   "description": "Website that exposes the Art Lazer Store's products",
   "main": "index.js",
   "scripts": {
+    "start": "node server.js",
     "test": "node node_modules/karma/bin/karma start core/test/karma.conf.js"
   },
   "repository": {
