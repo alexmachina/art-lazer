@@ -10,7 +10,7 @@ var Express = require('express'),
 /* Module that settles express'es middlewares */
 module.exports = function () {
 	var express = Express();
-	express.set('port', process.env.OPENSHIFT_NODEJS_PORT || Config.expressPort);
+	express.set('port', process.env.OPENSHIFT_NODE4_PORT || Config.expressPort);
 
 	//Defines the application routes
 
