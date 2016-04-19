@@ -12,6 +12,8 @@ module.exports = function () {
 	var express = Express();
 	express.set('port', process.env.OPENSHIFT_NODEJS_PORT || Config.expressPort);
 
+	express.set('ip', process.env.OPENSHIFT_NODEJS_IP);
+
 	//Defines the application routes
 
 	express.use("/api/admin", ExpressJWT({secret : "donniebrasco"}).unless({path : ['/api/admin/user/login']}));

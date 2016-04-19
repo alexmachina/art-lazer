@@ -1,0 +1,96 @@
+==> app-root/logs/nodejs.log <==
+    at EventEmitter.listen (/var/lib/openshift/5716a2c089f5cfa8fc0000e7/app-root/runtime/repo/node_modules/express/lib/application.js:617:24)
+    at Server.start (/var/lib/openshift/5716a2c089f5cfa8fc0000e7/app-root/runtime/repo/core/server/index.js:11:14)
+    at Object.<anonymous> (/var/lib/openshift/5716a2c089f5cfa8fc0000e7/app-root/runtime/repo/index.js:3:8)
+    at Module._compile (module.js:413:34)
+    at Object.Module._extensions..js (module.js:422:10)
+    at Module.load (module.js:357:32)
+    at Function.Module._load (module.js:314:12)
+    at Function.Module.runMain (module.js:447:10)
+    at startup (node.js:146:18)
+    at node.js:404:3
+
+==> app-root/logs/mongodb.log <==
+Tue Apr 19 18:46:58.768 [initandlisten] MongoDB starting : pid=15443 port=27017 dbpath=/var/lib/openshift/5716a2c089f5cfa8fc0000e7/mongodb/data/ 64-bit host=ex-std-node787.prod.rhcloud.com
+Tue Apr 19 18:46:58.769 [initandlisten] db version v2.4.9
+Tue Apr 19 18:46:58.769 [initandlisten] git version: nogitversion
+Tue Apr 19 18:46:58.769 [initandlisten] build info: Linux x86-025.build.eng.bos.redhat.com 2.6.32-431.5.1.el6.x86_64 #1 SMP Fri Jan 10 14:46:43 EST 2014 x86_64 BOOST_LIB_VERSION=1_41
+Tue Apr 19 18:46:58.769 [initandlisten] allocator: tcmalloc
+Tue Apr 19 18:46:58.769 [initandlisten] options: { auth: true, bind_ip: "127.7.173.2", command: [ "run" ], config: "/var/lib/openshift/5716a2c089f5cfa8fc0000e7/mongodb//conf/mongodb.conf", dbpath: "/var/lib/openshift/5716a2c089f5cfa8fc0000e7/mongodb/data/", nohttpinterface: "true", noprealloc: "true", pidfilepath: "/var/lib/openshift/5716a2c089f5cfa8fc0000e7/mongodb/pid/mongodb.pid", quiet: "true", smallfiles: "true" }
+Tue Apr 19 18:46:58.771 [initandlisten] journal dir=/var/lib/openshift/5716a2c089f5cfa8fc0000e7/mongodb/data/journal
+Tue Apr 19 18:46:58.771 [initandlisten] recover : no journal files present, no recovery needed
+Tue Apr 19 18:46:58.781 [initandlisten] waiting for connections on port 27017
+Tue Apr 19 18:46:59.709 [conn1]  authenticate db: admin { authenticate: 1, nonce: "1a6b6639879c13a4", user: "admin", key: "3f8dff2c399989718fed7bc8614b7602" }
+Tue Apr 19 18:50:13.227 [signalProcessingThread] got signal 15 (Terminated), will terminate after current cmd ends
+Tue Apr 19 18:50:13.227 [signalProcessingThread] now exiting
+Tue Apr 19 18:50:13.227 dbexit: 
+Tue Apr 19 18:50:13.227 [signalProcessingThread] shutdown: going to close listening sockets...
+Tue Apr 19 18:50:13.227 [signalProcessingThread] closing listening socket: 11
+Tue Apr 19 18:50:13.227 [signalProcessingThread] shutdown: going to flush diaglog...
+Tue Apr 19 18:50:13.227 [signalProcessingThread] shutdown: going to close sockets...
+Tue Apr 19 18:50:13.227 [signalProcessingThread] shutdown: waiting for fs preallocator...
+Tue Apr 19 18:50:13.227 [signalProcessingThread] shutdown: lock for final commit...
+Tue Apr 19 18:50:13.227 [signalProcessingThread] shutdown: final commit...
+Tue Apr 19 18:50:13.227 [signalProcessingThread] shutdown: closing all files...
+Tue Apr 19 18:50:13.227 [signalProcessingThread] closeAllFiles() finished
+Tue Apr 19 18:50:13.227 [signalProcessingThread] journalCleanup...
+Tue Apr 19 18:50:13.227 [signalProcessingThread] removeJournalFiles
+Tue Apr 19 18:50:13.230 [signalProcessingThread] shutdown: removing fs lock...
+Tue Apr 19 18:50:13.230 dbexit: really exiting now
+note: noprealloc may hurt performance in many applications
+Tue Apr 19 18:50:14.336 [initandlisten] MongoDB starting : pid=32075 port=27017 dbpath=/var/lib/openshift/5716a2c089f5cfa8fc0000e7/mongodb/data/ 64-bit host=ex-std-node787.prod.rhcloud.com
+Tue Apr 19 18:50:14.336 [initandlisten] db version v2.4.9
+Tue Apr 19 18:50:14.336 [initandlisten] git version: nogitversion
+Tue Apr 19 18:50:14.336 [initandlisten] build info: Linux x86-025.build.eng.bos.redhat.com 2.6.32-431.5.1.el6.x86_64 #1 SMP Fri Jan 10 14:46:43 EST 2014 x86_64 BOOST_LIB_VERSION=1_41
+Tue Apr 19 18:50:14.336 [initandlisten] allocator: tcmalloc
+Tue Apr 19 18:50:14.336 [initandlisten] options: { auth: true, bind_ip: "127.7.173.2", command: [ "run" ], config: "/var/lib/openshift/5716a2c089f5cfa8fc0000e7/mongodb//conf/mongodb.conf", dbpath: "/var/lib/openshift/5716a2c089f5cfa8fc0000e7/mongodb/data/", nohttpinterface: "true", noprealloc: "true", pidfilepath: "/var/lib/openshift/5716a2c089f5cfa8fc0000e7/mongodb/pid/mongodb.pid", quiet: "true", smallfiles: "true" }
+Tue Apr 19 18:50:14.338 [initandlisten] journal dir=/var/lib/openshift/5716a2c089f5cfa8fc0000e7/mongodb/data/journal
+Tue Apr 19 18:50:14.339 [initandlisten] recover : no journal files present, no recovery needed
+Tue Apr 19 18:50:14.349 [initandlisten] waiting for connections on port 27017
+Tue Apr 19 18:50:15.398 [conn1]  authenticate db: admin { authenticate: 1, nonce: "e00a6539a715dba9", user: "admin", key: "1c63eabab4fad09e6c231bf120b4276f" }
+
+==> app-root/logs/nodejs.log <==
+events.js:154
+      throw er; // Unhandled 'error' event
+      ^
+Error: listen EADDRINUSE :::8080
+    at Object.exports._errnoException (util.js:890:11)
+    at exports._exceptionWithHostPort (util.js:913:20)
+    at Server._listen2 (net.js:1234:14)
+    at listen (net.js:1270:10)
+    at Server.listen (net.js:1366:5)
+    at EventEmitter.listen (/var/lib/openshift/5716a2c089f5cfa8fc0000e7/app-root/runtime/repo/node_modules/express/lib/application.js:617:24)
+    at Server.start (/var/lib/openshift/5716a2c089f5cfa8fc0000e7/app-root/runtime/repo/core/server/index.js:11:14)
+    at Object.<anonymous> (/var/lib/openshift/5716a2c089f5cfa8fc0000e7/app-root/runtime/repo/index.js:3:8)
+    at Module._compile (module.js:413:34)
+    at Object.Module._extensions..js (module.js:422:10)
+    at Module.load (module.js:357:32)
+    at Function.Module._load (module.js:314:12)
+    at Function.Module.runMain (module.js:447:10)
+    at startup (node.js:146:18)
+    at node.js:404:3
+
+==> app-root/logs/mongodb.log <==
+Tue Apr 19 18:51:18.560 [signalProcessingThread] got signal 15 (Terminated), will terminate after current cmd ends
+Tue Apr 19 18:51:18.560 [signalProcessingThread] now exiting
+Tue Apr 19 18:51:18.560 dbexit: 
+Tue Apr 19 18:51:18.560 [signalProcessingThread] shutdown: going to close listening sockets...
+Tue Apr 19 18:51:18.560 [signalProcessingThread] closing listening socket: 11
+Tue Apr 19 18:51:18.560 [signalProcessingThread] shutdown: going to flush diaglog...
+Tue Apr 19 18:51:18.560 [signalProcessingThread] shutdown: going to close sockets...
+Tue Apr 19 18:51:18.560 [signalProcessingThread] shutdown: waiting for fs preallocator...
+Tue Apr 19 18:51:18.560 [signalProcessingThread] shutdown: lock for final commit...
+Tue Apr 19 18:51:18.560 [signalProcessingThread] shutdown: final commit...
+Tue Apr 19 18:51:18.560 [signalProcessingThread] shutdown: closing all files...
+Tue Apr 19 18:51:18.560 [signalProcessingThread] closeAllFiles() finished
+Tue Apr 19 18:51:18.560 [signalProcessingThread] journalCleanup...
+Tue Apr 19 18:51:18.560 [signalProcessingThread] removeJournalFiles
+Tue Apr 19 18:51:18.564 [signalProcessingThread] shutdown: removing fs lock...
+Tue Apr 19 18:51:18.564 dbexit: really exiting now
+note: noprealloc may hurt performance in many applications
+Tue Apr 19 18:51:19.818 [initandlisten] MongoDB starting : pid=38177 port=27017 dbpath=/var/lib/openshift/5716a2c089f5cfa8fc0000e7/mongodb/data/ 64-bit host=ex-std-node787.prod.rhcloud.com
+Tue Apr 19 18:51:19.818 [initandlisten] db version v2.4.9
+Tue Apr 19 18:51:19.819 [initandlisten] git version: nogitversion
+Tue Apr 19 18:51:19.819 [initandlisten] build info: Linux x86-025.build.eng.bos.redhat.com 2.6.32-431.5.1.el6.x86_64 #1 SMP Fri Jan 10 14:46:43 EST 2014 x86_64 BOOST_LIB_VERSION=1_41
+Tue Apr 19 18:51:19.819 [initandlisten] allocator: tcmalloc
+Tue Apr 19 18:51:19.819 [initandlisten] options: { auth: true, bind_ip: "127.7.173.2", command: [ "run" ], config: "/var/lib/openshift/5716a2c089f5cfa8fc0000e7/mongodb//conf/mongodb.conf", dbpath: "/var/lib/openshift/5716a2c089f5cfa8fc0000e7/mongodb/data/", nohttpinterface: "true", noprealloc: "true", pidfilepath: "/var/lib/openshift/5716a2c089f5cfa8fc0000e7/mongodb/pid/mongodb.pid", quiet: "true", smallfiles: "true" }

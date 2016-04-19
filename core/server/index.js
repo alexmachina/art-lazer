@@ -8,7 +8,7 @@ function Server() {
 	ip = process.env.OPENSFHIT_NODEJS_IP || '127.0.0.1';
 
 		//Starts server at configurated port.
-		ExpressApp.listen(ExpressApp.get('port'), function(error){
+		ExpressApp.listen(ExpressApp.get('port'), ip, function(error){
 			if(typeof callback === 'function')
 				callback(error, ExpressApp);
 		});
